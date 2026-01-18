@@ -19,6 +19,7 @@
     "start": "nodemon ./src/index"
   },
   "dependencies": {
+    "bson": "^7.1.1",
     "express": "^5.2.1",
     "mongoose": "^9.1.4",
     "nodemon": "^3.1.11"

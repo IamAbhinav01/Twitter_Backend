@@ -1,5 +1,6 @@
 import express from 'express';
 import connect from './config/database.js';
+import Tweet from './models/tweet.js';
 // express is fast comparing to http
 const app = express();
 
@@ -8,7 +9,10 @@ app.listen(3000, async () => {
 
   connect();
   console.log('Connected to MongoDB');
-  // create a schema
-  // create a model
-  // create a model
+  Tweet.create({
+    content: 'This is my first tweet',
+    likes: 25,
+    noOfRetweets: 5,
+    comment: 'This is my first comment on my tweet',
+  });
 });
