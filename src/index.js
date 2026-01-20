@@ -1,7 +1,7 @@
 import express from 'express';
 import connect from './config/database.js';
-import Hashtag from './models/hashtag.js';
-import Tweet from './models/tweet.js';
+
+import TweetRepository from '../src/Repository/tweet-repository.js';
 // express is fast comparing to http
 const app = express();
 
@@ -10,15 +10,18 @@ app.listen(3000, async () => {
 
   connect();
   console.log('Connected to MongoDB');
-  Tweet.create({
-    content: 'This is my first tweet',
-    likes: 25,
-    noOfRetweets: 5,
-    comment: 'This is my first comment on my tweet',
-  });
+  // Tweet.create({
+  //   content: 'This is my first tweet',
+  //   likes: 25,
+  //   noOfRetweets: 5,
+  //   comment: 'This is my first comment on my tweet',
+  // });
 
-  Hashtag.create({
-    text: 'programming',
-    tweets: ['6486f4e2f0d5c2b1a5e4d3c7'],
-  });
+  // Hashtag.create({
+  //   text: 'programming',
+  //   tweets: ['6486f4e2f0d5c2b1a5e4d3c7'],
+  // });
+  const tweetRepository = new TweetRepository();
+  let tweets = await tweetRepository.getAlltweets();
+  console.log(tweets);
 });
