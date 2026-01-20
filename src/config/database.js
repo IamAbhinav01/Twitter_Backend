@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const connect = async () => {
   await mongoose.connect(
-    'mongodb+srv://abhinavsunil:iamAbhinav%402005@cluster0.vcvudsx.mongodb.net/'
+    'mongodb+srv://abhinavsunil_db_user:abhinav@cluster0.rbgfyxs.mongodb.net/'
   );
 };
 
