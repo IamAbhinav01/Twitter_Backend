@@ -10,6 +10,15 @@ class TweetRepository {
       throw error;
     }
   }
+  async getTweet(id) {
+    try {
+      const tweet = await Tweet.findById(id);
+      return tweet;
+    } catch (error) {
+      console.log(error);
+      throw error;
+    }
+  }
   async getAlltweets() {
     try {
       const tweets = await Tweet.find({});

@@ -21,7 +21,8 @@ app.listen(3000, async () => {
   //   text: 'programming',
   //   tweets: ['6486f4e2f0d5c2b1a5e4d3c7'],
   // });
-  const tweetRepository = new TweetRepository();
-  let tweets = await tweetRepository.getAlltweets();
-  console.log(tweets);
+  // const tweetRepository = new TweetRepository();
+  // let tweets = await tweetRepository.getAlltweets();
+  // let tweet = await tweetRepository.getTweet('696f5f55237a908dc6d06619');
+  // console.log(tweet);
 });
