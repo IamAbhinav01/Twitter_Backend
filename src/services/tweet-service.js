@@ -1,5 +1,5 @@
-import TweetRepository from '../Repository/tweet-repository';
-import HashtagRepository from '../Repository/hashtag-repository';
+import TweetRepository from '../Repository/tweet-repository.js';
+import HashtagRepository from '../Repository/hashtag-repository.js';
 
 class TweetService {
   constructor() {
@@ -31,3 +31,4 @@ class TweetService {
     return tweet;
   }
 }
+export default TweetService;

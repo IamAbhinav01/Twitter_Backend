@@ -1,10 +1,14 @@
 import express from 'express';
 import connect from './config/database.js';
-
+import router from './routes/index.js';
 import TweetRepository from '../src/Repository/tweet-repository.js';
 import HashtagRepository from './Repository/hashtag-repository.js';
+import bodyParser from 'body-parser';
 // express is fast comparing to http
 const app = express();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use('/', router);
 
 app.listen(3000, async () => {
   console.log('Server is running on port 3000');
