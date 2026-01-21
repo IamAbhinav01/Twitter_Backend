@@ -2,6 +2,7 @@ import express from 'express';
 import connect from './config/database.js';
 
 import TweetRepository from '../src/Repository/tweet-repository.js';
+import HashtagRepository from './Repository/hashtag-repository.js';
 // express is fast comparing to http
 const app = express();
 
